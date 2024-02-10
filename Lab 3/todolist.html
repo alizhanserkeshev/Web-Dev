@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: left;
+            margin-left: 350px;
+           }
+
+        #taskInput {
+            width: 500px;
+            padding: 8px;
+            margin: 10px 0;
+            margin-left: 430px;
+        }
+
+        #addTaskBtn {
+            padding: 8px;
+            cursor: pointer;
+            background-color: blue;
+        }
+
+        #taskList {
+            list-style-type: none;
+            width:700px;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .taskItem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+        }
+
+        .taskItem span {
+            flex: 1;
+        }
+
+        .deleteBtn {
+            background-color: #ff6961;
+            color: #fff;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .deleteIcon {
+            width: 20px; 
+            height: 20px; 
+            background: url(https://cdn-icons-png.flaticon.com/512/1869/1869974.png) center/cover no-repeat; 
+        }
+        h3 {
+            text-align: left;
+            width: 100%;
+            height: 25px;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .checkBox {
+            margin-right: 10px;
+        }
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h3 style="color:white">ToDo List</h3>
+    </div>
+    <h1>ToDo List</h1>
+    
+    <input type="text" id="taskInput" placeholder="New task">
+    <button id="addTaskBtn" onclick="addTask()" style="color:white">Add</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            let taskInput = document.getElementById("taskInput");
+            let taskList = document.getElementById("taskList");
+
+            if (taskInput.value.trim() !== "") {
+                let taskItem = document.createElement("li");
+                taskItem.className = "taskItem";
+
+                let taskText = document.createElement("span");
+                taskText.textContent = taskInput.value;
+
+                let checkBox = document.createElement("input");
+                checkBox.type = "checkbox";
+                checkBox.className = "checkBox";
+                checkBox.addEventListener("change", function() {
+                    taskText.classList.toggle("completed", this.checked);
+                });
+
+                let deleteBtn = document.createElement("button");
+                deleteBtn.className = "deleteBtn";
+                let deleteIcon = document.createElement("div");
+                deleteIcon.className = "deleteIcon";
+                deleteBtn.appendChild(deleteIcon);
+                deleteBtn.onclick = function () {
+                    taskList.removeChild(taskItem);
+                };
+                taskItem.appendChild(checkBox);
+                taskItem.appendChild(taskText);
+                taskItem.appendChild(deleteBtn);
+                taskList.appendChild(taskItem);
+
+                taskInput.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
