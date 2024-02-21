@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="store.css">
+  
+    <link rel="stylesheet" href="iphone14.js">
+</head>
+<body>
+<div id="maindiv">
+
+        <div id="store">
+            <span id="mystore">Kaspi.kz</span> 
+        </div>
+        
+        <div id="checkoutx">
+            <button id="button1">
+            <img id="check" src="https://i.pinimg.com/736x/8b/8d/98/8b8d98e28309855b36aea06fead63e80.jpg" alt="">
+            <span id="checkout">Checkout</span>
+            </button>
+        </div>
+    
+
+        <div id="productdiv">
+            <span id="products">Products</span>
+        </div>
+        <div>
+            <div class="items">
+                <div id="iphone14">
+    
+                    <button class="heading" style="border: none; background-color: #FFFF; cursor:pointer" onclick="toggleIphone()">Apple iPhone 14 128Gb Smartphone Black</button>
+    
+                    <div id="text">
+                        <p>Description: <br>
+                            NFC Technology: Yes <br>
+                            Color: Black <br>
+                            Screen type: OLED, Super Retina XDR display <br>
+                            diagonal: 6.1 inches <br>
+                            RAM size: 6 GB<br>
+                            Processor: 6-core Apple A15 Bionic<br>
+                            Internal memory: 128.0 GB<br>
+                            Battery capacity: 3279.0mAh</p>
+                        <p>Rating: 5.0</p>
+                        <p>Price: 327 584 ₸</p>
+                        <a href="https://kaspi.kz/shop/p/apple-iphone-14-128gb-chernyi-106363023/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_smartphones_apple_desktop&gclid=CjwKCAiA29auBhBxEiwAnKcSqmJ6aOSQ_rNsWgAJBqVP22-S861TbHz0BnrVtUe36vtr5HDH5mUb5hoCwAsQAvD_BwE"><button class="button">Share</button></a>
+                    </div>
+    
+                    <div class="all">
+                        <input checked type="radio" name="respond" id="desktop">
+                        <article id="slider">
+                                <input checked type="radio" name="slider" id="switch1">
+                                <input type="radio" name="slider" id="switch2">
+                                <input type="radio" name="slider" id="switch3">
+                                <input type="radio" name="slider" id="switch4">
+                                <input type="radio" name="slider" id="switch5">
+                            <div id="slides">
+                                <div id="overflow">
+                                    <div class="image">
+                                        <article><img style="width: 150px; height: 300px;"; src="64400502915102.jpg"></img></article>
+                                        <article><img style="width: 150px; height: 300px;"; src="64400500097054.jpg"></img></article>
+                                        <article><img style="width: 100px; height: 300px;"; src="64400497737758.jpg"></img></article>
+                                        <article><img style="width: 100px; height: 300px;"; src="64400506159134.jpg"></img></article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="controls">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                                <label for="switch4"></label>
+                                <label for="switch5"></label>
+                            </div>
+                            <div id="active">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                                <label for="switch4"></label>
+                                <label for="switch5"></label>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <script src="iphone14.js"></script>
+            <script>
+                
+                function toggleIphone() {
+                    var iphoneButton = document.querySelector('#iphone button.heading');
+                    iphoneButton.classList.toggle('active');
+                }
+            </script>
+        </div>
+<script src="iphone.js"></script>
+</body>
+</html>
