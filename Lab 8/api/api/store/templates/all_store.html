@@ -1,0 +1,22 @@
+{% extends 'master.html'}
+{ % block title % }
+My Store Menu
+{% endblock %}
+
+    {% block content %}
+    <p><a href="/">HOME</a></p>
+        <h1>Storechik</h1>
+        <uL>
+            {% for x in my_store %}
+            <li>
+                <strong>{{ x.name }}</strong> - Price: ${{ x.price }} | Count: {{x.count}} 
+                {% if x.is_active %}
+                (Active)
+                {% else %}
+                (Inactive)
+                {% endif %}
+                <p>{{x.desciption}}</p>
+            </li>
+            {% endfor %}
+        </uL>
+    {% endblock %}

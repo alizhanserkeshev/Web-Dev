@@ -1,0 +1,15 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ x.name }} 
+{% endblock %}
+
+
+{% block content %}
+        <h1>{{x.name}} {{x.is_active}}</h1>
+        <p>Description: {{x.desciption}}</p>
+        <p>Count: {{x.count}}</p>
+        <p>Price: {{x.price}}</p>
+
+        <p>Back to <a href="/store">Store</a></p>
+{% endblock %}
