@@ -1,5 +1,5 @@
 from django.urls import path
-from api import views
+from hhback import views
 
 urlpatterns = [
     path('companies/', views.get_companies),
